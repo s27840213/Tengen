@@ -1,0 +1,32 @@
+
+.highlight {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+    transform-origin: right center;
+    @apply bg-yellow;
+    // background-color: #f7ee4b;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

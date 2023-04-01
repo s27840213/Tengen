@@ -5,11 +5,11 @@ div(
   img(
     class="pointer-events-none z-10 h-16 drop-shadow-[4px_4px_0px_white]"
     src="@/assets/img/logo.svg")
-  transition(name="fade" mode="out-in")
-    img(
-      v-if="hoveredProductSrc"
-      class="pointer-events-none absolute z-10 h-1/2"
-      :src="hoveredProductSrc")
+  //- transition(name="fade" mode="out-in")
+  //-   img(
+  //-     v-if="hoveredProductSrc"
+  //-     class="pointer-events-none absolute z-10 h-1/2"
+  //-     :src="hoveredProductSrc")
   template(v-if="heroSection && width && height")
     floating-product(
       v-for="(product, index) in products"
@@ -71,6 +71,16 @@ const products: IProduct[] = [
   },
   {
     src: require('@/assets/img/product/product-2.png'),
+    hoverImgSrc: require('@/assets/img/demo-1.png'),
+    link: '#'
+  },
+  {
+    src: require('@/assets/img/product/product-4.png'),
+    hoverImgSrc: require('@/assets/img/demo-1.png'),
+    link: '#'
+  },
+  {
+    src: require('@/assets/img/product/product-4.png'),
     hoverImgSrc: require('@/assets/img/demo-1.png'),
     link: '#'
   },

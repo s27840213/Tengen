@@ -11,7 +11,6 @@ div(
   //-     v-if="hoveredProductSrc"
   //-     class="pointer-events-none absolute z-10 h-1/2"
   //-     :src="hoveredProductSrc")
-  div(class="test bg-gray" :style="testRectStyle")
   template(v-if="heroSection && heroSectionWidth && heroSectionHeight")
     floating-product(
       v-for="(product, index) in products"
@@ -41,7 +40,7 @@ defineProps({
     default: false
   }
 })
-const VECTOR_NUM = 2
+const VECTOR_NUM = 1
 const productRefs = ref<HTMLElement[]>(null as unknown as HTMLElement[])
 const heroSection = ref<HTMLElement | undefined>(undefined)
 const heroSectionBounding = useElementBounding(heroSection)

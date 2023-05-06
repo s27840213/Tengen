@@ -58,7 +58,7 @@ const imgStyles = reactive({
 
 <style lang="scss" scoped>
 .pulse {
-  animation: pulse 4s infinite;
+  animation: pulse 6s infinite;
 }
 
 @keyframes pulse {
@@ -70,8 +70,8 @@ const imgStyles = reactive({
     transform: scale(1.3);
     opacity: 0.9;
   }
-  45% {
-    transform: scale(1);
+  65% {
+    transform: scale(1.3);
     opacity: 1;
   }
   100% {
